@@ -1,0 +1,528 @@
+@splitLine:1px solid #dee7fa;
+@baseColor:#5987e4;//#2ECF38
+
+.ui-tabs-ray{
+    height: 100%;
+
+    .tabs-nav{
+        overflow: hidden;
+        height: 50px;
+        border-bottom: @splitLine;
+
+        .tabs-title{
+            float: left;
+            line-height: 50px;
+            font-size: 14px;
+            margin: 0 20px;
+            color: #999;
+        }
+
+        .tabs-tab{
+            float: left;
+            cursor: pointer;
+            padding: 0 20px;
+            line-height: 47px;
+            margin: 0 5px;
+            
+        }
+        .tabs-active{
+            color: @baseColor;
+            border-bottom: 2px solid @baseColor;
+        }
+    }
+    .tabs-content{
+        height: e("calc(100% - 50px)");
+        .tabs-panel{
+            height: 100%;
+            display: none;
+        }
+        .tabs-active{
+            display: block
+        }
+    }
+    // 覆盖的一些样式
+    .ant-form-item-control-wrapper{
+        display: inline-block;
+    }
+    .ant-form-item-label{
+        vertical-align: top;
+        font-size: 14px;
+    }
+}
+
+// menuList
+
+.menu-list{
+    padding: 10px;
+    overflow: hidden;
+    height: 100%;
+    border-right: @splitLine;
+
+    .menu-item{
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        font-size: 14px;
+
+        .iconfont{
+            float: right;
+            color: @baseColor;
+        }
+    }
+
+    .menu-active {
+        background: #dfeaff;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 7px solid #DFEAFF;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            right: -7px;
+            top: 50%;
+            margin-top: -5px;
+        }
+    }
+}
+
+.status-bar{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: @splitLine;
+    padding: 0 20px;
+    position: relative;
+
+    label{
+        margin: 0 20px;
+        input{
+            margin-right: 5px;
+        }
+    }
+}
+
+.status-model {
+
+    padding: 20px;
+    border-bottom: @splitLine;
+    overflow: hidden;
+    .model-img{
+        // display: inline-block;
+        height: 240px;
+        width: 300px;
+        float: left;
+        background:url('./img/model-single.png') no-repeat 100% ;
+    }
+
+    .model-content{
+        overflow: hidden;
+        height: 100%;
+
+        .edit-btn-info{
+            text-align: right;
+            color: @baseColor;
+            line-height: 25px;
+            height: 25px;
+            .edit-cancel-btn{
+                margin-left: 20px;
+            }
+            .edit-edit-btn{
+                display: inline-block;
+                background: url('./img/icon_list_amend.png') no-repeat left;
+                padding-left: 20px;
+                cursor: pointer;
+            }
+            .edit-del-btn{
+                display: inline-block;
+                background: url('./img/icon_list_delete.png') no-repeat left;
+                margin-left: 30px;
+                padding-left: 20px;
+                cursor: pointer;
+            }
+        }
+        
+        .model-info{
+            margin-top:30px; 
+
+            .model-info-line{
+                margin-top: 20px;
+            }
+            .default-info{
+                margin-top: 30px;
+                padding-left: 45px;
+                color: #999;
+            }
+            .default-page{
+                padding-left: 50px;
+            }
+            .model-radio{
+                padding-left: 45px;
+                width: 300px;
+            }
+            .model-url{
+                display: inline-block;
+                vertical-align: middle;
+                width: 60%;
+                margin-left: 20px;
+                line-height: 30px;
+                input{
+                    line-height: 1;
+                    outline: none;
+                    padding: 6px 5px;
+                    border: @splitLine;
+                }
+            }
+            .model-label{
+                text-align: right;
+                width: 100px;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 8px;
+                color:#666;
+            }
+
+            .model-detail{
+                display: inline-block;
+                width: 60%;
+                margin-left: 20px;
+                height: 60px;
+                overflow-y: auto;
+
+                .add-person{
+                    display: inline-block;
+                    width: 30px;
+                    height: 35px;
+                    vertical-align: middle;
+                    background: url('./img/icon_add_list.png') no-repeat center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.mobile-single{
+    .status-model{
+        .model-img{
+            // display: inline-block;
+            height: 240px;
+            width: 300px;
+            float: left;
+            background:url('./img/image_phone.png') no-repeat 100% ;
+        }
+    }
+    
+}
+
+.model-item-block{
+    padding: 10px;
+    background: #f2f2f2;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right:10px; 
+    margin-bottom: 10px;
+    span{
+        vertical-align: middle;
+    }
+    .iconfont {
+        margin-left: 5px;
+        font-size: 14px;
+        vertical-align: middle;
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+.add-status-model{
+    height: 240px;
+    width: 300px;
+    display: inline-block;
+    margin: 20px;
+    border: 1px dashed #dee7fa;
+    line-height: 240px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    .add-config-text{
+        display: inline-block;
+        background: url('./img/icon_add_list.png') no-repeat left center;
+        padding-left: 35px;
+    }
+}
+
+.config-grid-item{
+    border: @splitLine;
+    margin-bottom: 10px;
+    .config-grid-title{
+        background: #f9fbff;
+        line-height: 35px;
+        border-bottom: @splitLine;
+        font-size:  14px;
+        color: #000;
+        padding: 0 14px;
+
+    }
+    .config-grid-content{
+
+        font-size: 14px;
+        color: #333;
+        height: 175px;
+        text-align: center;
+        position: relative;
+
+        .config-grid-change{
+            cursor: pointer;
+            padding-left: 30px;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 20px;
+
+            background: url('./img/icon_edit.png') no-repeat left;
+        }
+        .config-grid-add{
+            cursor: pointer;
+            padding-left: 30px;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 20px;
+            background: url('./img/icon_add_list.png') no-repeat left;
+        }
+    }
+}
+
+.grid-model-1{
+    .config-grid-item{
+        float: left;
+        width: 69%;
+        &:nth-child(even){
+            width: 30%;
+            float: right;
+        }
+    }
+}
+.grid-model-2{
+    .config-grid-item{
+        float: left;
+        width: 49.5%;
+        margin-bottom: 10px;
+        &:nth-child(even){
+            width: 49.5%;
+            float: right;
+        }
+    }
+    
+}
+
+// config modal
+.app-modal-box{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999999;
+    .app-modal{
+        z-index: 999;
+        width: 528px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        // border: 1px #b9b9b9 solid;
+        
+        .app-modal-title{
+            line-height: 40px;
+            background: #5987e4;
+            padding: 0 20px;
+            font-size: 14px;
+            color: white;
+            height: 40px;
+            .iconfont{
+                float: right;
+                cursor: pointer;
+            }
+        }
+
+        .app-modal-content{
+            background: #fafafa;
+            overflow: hidden;
+            padding-bottom: 35px;
+            padding-top: 15px; 
+
+            .app-modal-item{
+                // margin-left: 20px;
+                margin-top: 20px;
+                // margin-right: 20px;
+                float: left;
+                text-align: center;
+                width: 75px;
+                position: relative;
+
+                .app-select-icon{
+                    background: url('./img/icon_check.png') no-repeat 100%;
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    z-index: 999;
+                    right: 14px;
+                    top: -5px;
+                }
+                img{
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                }
+                .app-modal-select{
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                }
+                .app-modal-name{
+                    display: block;
+                    margin-top: 5px;
+                    cursor: pointer;
+                    padding: 0 10px;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+}
+
+.edit-edit-btn{
+    color: @baseColor;
+    display: inline-block;
+    background: url('./img/icon_list_amend.png') no-repeat left;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.status-edit-btn{
+    float: right;
+    top: 10px;
+}
+
+.person-list{
+    padding: 20px;
+
+    .person-list-label{
+        display: inline-block; 
+        padding: 10px 20px;
+    }
+    .add-person{
+        display: inline-block;
+        width: 30px;
+        height: 32px;
+        vertical-align: middle;
+        background: url('./img/icon_add_list.png') no-repeat center;
+        cursor: pointer;
+    }
+}
+
+.confirm-wrap{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+
+    .confirm-box{
+        background-color: #fff;
+        z-index: 100000;
+        position: absolute;
+        color: #333;
+        font-family: "微软雅黑";
+        font-size: 12px;
+        width: 300px;
+        height: 200px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        .confirm-header{
+            position: relative;
+            border-bottom: 1px solid #d0ddf5;
+
+            .confirm-title{
+                margin: 15px;
+                text-align: center;
+                font-size: 15px;
+            }
+            .confirm-close{
+                position:absolute;
+                width: 20px;
+                height: 20px;
+                right: 0;
+                top: -2px;
+                cursor: pointer;
+                background: url('./img/close.png') no-repeat center;
+            }
+        }
+
+        .confirm-body{
+            margin: 20px 8px;
+            background: url('./img/warning.png')  no-repeat  left center ;
+            padding-left: 70px;
+            height: 50px;
+            position: relative;
+            .confirm-content{
+                line-height: 25px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .confirm-footer{
+            padding: 5px 0 20px 0;
+            margin: 0 auto;
+            text-align: center;
+            .ant-btn-background-ghost.ant-btn-primary{
+                border: 1px solid #d0ddf5;
+            }
+            .ant-btn-background-ghost.ant-btn-primary:hover, .ant-btn-background-ghost.ant-btn-primary:focus{
+                background: #73a2ff !important;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+// 覆盖样式
+.ant-btn{
+    border-radius: 2px;
+}
+
+.split-line{
+    display: inline-block;
+    border-right: 1px #e3e3e3 solid;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    margin-left: 20px;
+}

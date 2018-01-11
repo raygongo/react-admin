@@ -1,0 +1,6 @@
+export {default as ConfigList} from './ConfigList'
+export {default as MenuList ,Menu} from './MenuList'
+export {default as PersonCheck} from './PersonCheck'
+export {default as Tabs, TabPane} from './Tabs'
+export {default as NumberInput} from './NumberInput'
+export {default as Confirm} from './Confirm'
